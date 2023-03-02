@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragon Travel Desk</title>
-    <link rel="stylesheet" href="index.css">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dragon Travel Desk</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
 </head>
 
 <body>
     <div class="green green_d-none">
-        <p>Success</p>
-        <button id="btn1">x</button>
+        <p>Success! Your form has been successfully submitted.</p>
+        <button id="Success_btn">x</button>
     </div>
     <div class="red red_d-none">
-        <p>failure</p>
-        <button id="btn2">x</button>
+        <p>Failure! Your form has not been successfully submitted.</p>
+        <button id="Failure_btn">x</button>
     </div>
 
     <div class="container">
-    <h1>Dragon Travel Desk</h1>
-    <form>
-        <div class="form-group">
-            <label for="form_control">Enter your username:</label>
-            <input type="text" placeholder="username" id="form_control" >
-        </div>
-        <div class="form-group">
-            <label for="form_control">Email address:</label>
-            <input type="email" placeholder="name@mail.com" id="form_control">
-        </div>
-        <div class="form-group">
-            <label for="form_control">Select Car:</label>
-            <select name="form" id="form_control">
-                <option>Maruti</option>
-                <option>Audi</option>
-                <option>Bmw</option>
-                <option>Suzuki</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="form_control">Enter your phone number</label>
-            <input type="text" id="form_control" placeholder="phone number">
-         
-        </div>
-        <div class="form-group">
-            <label for="form_control">Enter your address:</label>
-            <textarea id="form_control" cols="30" rows="10"></textarea>
+        <h1>Dragon Travel Desk</h1>
+        <form>
+            <div class="form-group">
+                <label for="form_control">Enter your username:</label>
+                <input type="text" placeholder="username" id="username" autocomplete="off" autofocus>
+                <span class="formerror"></span>
+            </div>
+            <div class="form-group">
+                <label for="form_control">Email address:</label>
+                <input type="email" placeholder="name@mail.com" id="email" autocomplete="off" >
+                <span class="formerror"></span>
+            </div>
+            <div class="form-group">
+                <label for="form_control">Select Car:</label>
+                <select name="form" id="form_control">
+                    <option>Maruti</option>
+                    <option>Audi</option>
+                    <option>Bmw</option>
+                    <option>Suzuki</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="form_control">Enter your phone number:</label>
+                <input type="text" id="phone" placeholder="phone number" autocomplete="off">
+                <span class="formerror"></span>
+            </div>
+            <div class="form-group">
+                <label for="form_control"> Password</label>
+                <input type="password" id="pass" autocomplete="off">
+                <span class="formerror"></span>
 
-        </div>
-        <div class="form-group">
-        <button class="btn">
-            Submit
-        </button>
+            </div>
+            <div class="form-group">
+                <label for="form_control">Confirm Password</label>
+                <input type="password" id="cpass" autocomplete="off">
+                <span class="formerror"></span>
+
+            </div>
+            <div class="form-group">
+                <button class="Submit_btn">Submit</button>
+            </div>
+        </form>
     </div>
- </form>
-</div>
 
-
-    <script src="index.js"></script>
 </body>
 
 </html>

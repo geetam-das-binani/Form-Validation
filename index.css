@@ -9,8 +9,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
+
+}
+
+p {
+    font-weight: 900;
+    font-family: serif;
 
 }
 
@@ -19,36 +25,10 @@ body {
     width: 100%;
     padding: .5em;
     position: relative;
-
 }
 
 .green_d-none {
     display: none;
-}
-
-#btn1 {
-    position: absolute;
-    right: 0;
-    top: 20%;
-    margin-right: 2em;
-    color: white;
-    background-image: linear-gradient(to right, red, blue);
-    
-  
-
-
-
-}
-
-#btn2 {
-    position: absolute;
-    right: 0;
-    top: 20%;
-    margin-right: 2em;
-     color: white;
-    background-image: linear-gradient(to right, red, blue);
-
-
 }
 
 .red {
@@ -56,7 +36,6 @@ body {
     width: 100%;
     padding: .5em;
     position: relative;
-
 }
 
 .red_d-none {
@@ -64,9 +43,29 @@ body {
 }
 
 
+#Success_btn {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    margin-right: 2em;
+    color: white;
+    background: black;
+}
+
+#Failure_btn{
+    position: absolute;
+    right: 0;
+    top: 20%;
+    padding: .1em;
+    margin-right: 2em;
+    color: rgb(249, 239, 239);
+    background: black;
+
+
+}
 
 .container {
-    margin: 1em;
+    margin: .5em;
 }
 
 .form-group {
@@ -75,53 +74,48 @@ body {
     flex-direction: column;
 }
 
+.formerror {
+    color: red;
+    font-weight: bolder;
+    font-size: .8rem;
+}
+
 label {
     font-weight: bolder;
 
 }
 
-select {
-    padding: 1em;
-    margin-top: .5em;
-}
-
-textarea {
-    margin-top: .5em;
-}
-
+select,
 input {
-    margin-top: .6em;
     padding: .5em;
-   
-
-}
-
-
-input,
-textarea,
-select {
+    margin-top: .5em;
     width: 50vw;
-
+    border-radius: 1rem;
+    border: 2px solid black;
 }
 
-
-.btn {
+.Submit_btn {
     width: 15%;
     padding: .5em;
     color: white;
-    background-image: linear-gradient(to right, red, blue);
+    background: rgb(18, 21, 105);
 }
 
+
 @media(max-width:675px) {
-    .btn {
+    .Submit_btn {
         width: 25%;
     }
 
     input,
-    textarea,
     select {
         width: 100%;
 
     }
+    #Success_btn,#Failure_btn{
+        margin-right: 1em;
+    }
+
+
 
 }
