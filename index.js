@@ -5,7 +5,7 @@ let phone = document.getElementById('phone');
 let pass = document.getElementById('pass');
 let cpass = document.getElementById('cpass');
 let formerror = document.getElementsByClassName('formerror');
-let button = document.querySelector('.Submit_btn');
+let button = document.querySelector('#Submit_btn');
 let validuser = false;
 let validemail = false;
 let validphone = false;
@@ -61,7 +61,7 @@ pass.addEventListener('keyup', (e) => {
         formerror[3].innerHTML = "";
     }
     else {
-        formerror[3].innerHTML = "*Password must contain one lower case,upper case,special character and a digit and must be more than 8 characters. "
+        formerror[3].innerHTML = "*Password must contain one lower case,upper case,special character,digit and must be more than 8 characters. "
         validpass = false;
     }
 
@@ -97,13 +97,15 @@ button.addEventListener("click", (e) => {
 })
 
 let Success_btn = document.querySelector("#Success_btn")
-Success_btn.addEventListener("click", () => {
+Success_btn.addEventListener("click", (e) => {
+    e.preventDefault();
     let green = document.querySelector(".green");
     green.classList.add("green_d-none")
 
 })
 let Failure_btn = document.querySelector("#Failure_btn")
-Failure_btn.addEventListener("click", () => {
+Failure_btn.addEventListener("click", (e) => {
+    e.preventDefault();
     let green = document.querySelector(".red");
     green.classList.add("red_d-none")
 })

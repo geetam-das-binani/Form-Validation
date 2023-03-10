@@ -14,9 +14,10 @@ body {
 
 }
 
-p {
-    font-weight: 900;
-    font-family: serif;
+ div > p {
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
 
 }
 
@@ -52,7 +53,7 @@ p {
     background: black;
 }
 
-#Failure_btn{
+#Failure_btn {
     position: absolute;
     right: 0;
     top: 20%;
@@ -66,18 +67,19 @@ p {
 
 .container {
     margin: .5em;
+    max-width: 100rem;
 }
+.container h1{
+    margin-left: .3em;
+}
+
 
 .form-group {
     margin: .5em;
     display: flex;
     flex-direction: column;
-}
+    justify-content: center;
 
-.formerror {
-    color: red;
-    font-weight: bolder;
-    font-size: .8rem;
 }
 
 label {
@@ -94,7 +96,13 @@ input {
     border: 2px solid black;
 }
 
-.Submit_btn {
+.formerror {
+    color: red;
+    font-weight: bolder;
+    font-size: .8rem;
+}
+
+#Submit_btn {
     width: 15%;
     padding: .5em;
     color: white;
@@ -103,17 +111,23 @@ input {
 
 
 @media(max-width:675px) {
-    .Submit_btn {
-        width: 25%;
+    #Submit_btn {
+        width: 30%;
     }
 
     input,
     select {
-        width: 100%;
+        width: 95vw;
 
     }
-    #Success_btn,#Failure_btn{
+
+    #Success_btn,
+    #Failure_btn {
         margin-right: 1em;
+    }
+
+    .container h1 {
+        margin-left: .5em;
     }
 
 
